@@ -1,0 +1,123 @@
+body, html, main {
+height: 100%;
+}
+
+.sticky-bg {
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+  margin: 0 auto; 
+}
+ 
+#myPic{
+  border-radius: 30%;
+}
+/* HOME*/
+#home {
+  font-family: 'Poiret One', cursive;
+  border:0;
+  margin:0;
+  height: 600px; 
+  text-align: center; 
+  /*top: 150px; */
+  /*width: 100%; */
+}
+
+.sticky-bg.home {
+  background-color: grey;
+  background-image: url(http://puckettpages.com/wp-content/uploads/2011/07/clouds-blue-sky-blurred-background-backdrop1.jpg);
+
+}
+#banner {
+  font-size : 300px;
+}
+
+#home h2 { 
+font-size: 70px;
+}
+
+#linksList li{
+  list-style-type:none;
+  display: inline;
+  padding: 10px;
+  background-color: rgba(227, 235, 240, .5);
+}
+
+
+ /*ABOUT*/
+
+#about{
+  text-align: center;
+  width: 100%; 
+ font-family: 'Roboto Condensed', sans-serif;
+  font-size: 150%;
+  color: gray;
+  padding: 170px;
+   border:0;
+  margin:0;
+  height: 600px; 
+ 
+  
+}
+
+
+.sticky-bg.about {
+  background-color: pale-blue;
+  background-image: url("http://www.thecanvasfactory.com.au/blog/wp-content/uploads/colour-themed-art-canvas-photo-prints-blurry-photo.jpg.pagespeed.ce.9cgCVX8eT5.jpg");
+ 
+}
+
+/*PORTFOLIO*/
+.sticky-bg.portfolio {
+  background-color: grey;
+  background-image: url(https://s-media-cache-ak0.pinimg.com/736x/5e/69/dc/5e69dc4797427650140e51312e3ce942.jpg);
+}
+
+.portfolioThumb {
+  height: 400px;
+  width: 400px;
+  border: 10px solid;
+  padding: 10px;
+  margin: 15px;
+  
+}
+#portfolio {
+  
+   font-family: 'Roboto Condensed', sans-serif;
+  font-size: 150%;
+  color: dark-gray;
+  text-align: center;
+}
+
+
+
+
+ /*CONTACT*/
+.sticky-bg.contact {
+  background-color: grey;
+  background-image: url(http://thumbs.dreamstime.com/t/blurred-pastel-background-multi-color-53448121.jpg);
+  font-family: font-family: 'Roboto Condensed', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 50px;
+  margin:0px;
+  border:40px;
+}
+ 
+/*CONTACT*/
+#contactsList li{
+  list-style-type:none;
+  display: inline;
+  padding: 20px 20px 30px 20px;
+  background-color: rgba(227, 235, 240, .5);
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.footer{
+  background-color:rgb(255, 233, 233);
+  
+}
+
