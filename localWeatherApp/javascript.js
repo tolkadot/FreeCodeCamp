@@ -24,10 +24,12 @@ console.log(req.responseText);
 var responseArr = JSON.parse(req.responseText); //parse the response
 console.log(responseArr);
 var tempKelvins = Math.round(responseArr.main.temp); //get the temperature data.
-var tempCelsius = Math.round(tempKelvins- 273.15);
-var tempFarenheit =  Math.round(((tempKelvins - 273) * 1.8 ) + 32);
+var iconID = (responseArr.weather[0].icon);//get the icon ID **** required
+var location = (responseArr.name);//get the location ID **** required
+var tempCelsius = Math.round(tempKelvins- 273.15); //tempCelsius *** required
+var tempFarenheit =  Math.round(((tempKelvins - 273) * 1.8 ) + 32);  //tempFaren *** required
 
-console.log(tempKelvins,tempCelsius, tempFarenheit );
+console.log(tempKelvins,tempCelsius, tempFarenheit, iconID, location );
 
 
 }
