@@ -13,14 +13,21 @@ navigator.geolocation.getCurrentPosition(success, error);
 
 http://api.openweathermap.org/data/2.5/weather?lat=45&lon=56
 
+
+    
+ 
+
+
 var xhr = new XMLHttpRequest() ;
 
 xhr.open("GET" , "http://api.openweathermap.org/data/2.5/weather?lat=37&lon=144", false );
 xhr.send();
 
+
 // Add your code above this line!
 
 console.log(xhr.status);
 console.log(xhr.statusText);
-console.log(xhr);
-
+//console.log(xhr);
+var myArr = JSON.parse(xhr.responseText);
+console.log(myArr.main.temp);
