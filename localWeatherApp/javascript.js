@@ -1,7 +1,6 @@
-var lat //declare  global variables to be used in API URL
-var lon
+
  
-function getCoords(){
+function getWeather(){
 
 function error(err) {
   console.warn('ERROR(' + err.code + '): ' + err.message);
@@ -11,8 +10,8 @@ navigator.geolocation.getCurrentPosition(success, error); //get browser location
 
 
 function success(pos) {  
-   lon = Math.round(pos.coords.longitude);
-   lat = Math.round(pos.coords.latitude);
+  var  lon = Math.round(pos.coords.longitude);
+  var  lat = Math.round(pos.coords.latitude);
    
 var req = new XMLHttpRequest() ; //
 req.open("GET" , "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + " &lon=" + lon, false); //format the API request URL
@@ -35,6 +34,6 @@ console.log(tempKelvins,tempCelsius, tempFarenheit, iconID, location );
 }
 }
 
-getCoords();
-var req = new XMLHttpRequest(); //
+getWeather();
+
 
