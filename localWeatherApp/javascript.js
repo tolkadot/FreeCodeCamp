@@ -15,7 +15,7 @@ navigator.geolocation.getCurrentPosition(success, error);
 var req = new XMLHttpRequest() ; //
 
 req.open("GET" , "http://api.openweathermap.org/data/2.5/weather?lat=37&lon=144", false );
-req.send();v
+req.send();
 
 console.log(req.status);
 console.log(req.statusText);
