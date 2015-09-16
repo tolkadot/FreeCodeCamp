@@ -1,11 +1,11 @@
+
+
+var timer = function(){
 var seconds = 0;
 var minutes = 0;
 var dispMin = 0;
+counter = 0;
 
-var timer = function(){
-
-for (counter = 1; counter < 180; counter ++)
-{
  if(counter<= 59){
      minutes = 0;
      dispMin = minutes + '0';
@@ -23,7 +23,6 @@ for (counter = 1; counter < 180; counter ++)
        
     minutes = Math.floor(counter/60);
     dispMin = minutes;
-     console.log("---");
     seconds = counter%60;
     if(seconds < 10) {seconds = '0' + seconds;}
      }
@@ -31,16 +30,22 @@ for (counter = 1; counter < 180; counter ++)
 if(minutes < 10) { dispMin = '0' + minutes;}
 
 console.log(dispMin + ":" + seconds);
-//updateDisplay();
-}
+counter++
+ 
+ if (counter === 120) {
+     clearInterval(timerId)
+
+ }
 
 };
 
-timer();
 
-//var updateDisplay = function() {
-//var timerId = setTimeout(timer, 1000);
-//};
+
+//timer();
+
+var updateDisplay = function() {
+var timerId = setInterval(timer, 1000);
+};
 
 
 
