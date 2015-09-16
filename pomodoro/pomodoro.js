@@ -1,17 +1,26 @@
+var seconds = 0;
+var minutes = 0;
 
-function countDown() {
-    
-    function toConsole() {
-        console.log("Hello");
+var timer = function(){
+
+for (counter = 0; counter < 1200; counter ++)
+{
+    if(counter%60 === 0)
+    {
+        minutes = minutes+1;
+        seconds = 0+'0';
     }
-    
-    var sessionLength = 10;
-    var countDownInterval = 3000; // 1 second
-    
-    for(i=0; i<10; i++){
-    
-    setInterval(toConsole(), 3000);
-    }
-    }
-    
-    countDown();
+    else {
+minutes = Math.ceil(counter/60);
+seconds = counter%60;
+if(seconds < 10) {
+    seconds = '0' + seconds;
+}
+}
+console.log(minutes + ":" + seconds)
+}
+
+}
+
+
+timer();
