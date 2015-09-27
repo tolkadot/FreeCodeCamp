@@ -1,5 +1,3 @@
-
-
 counter = 0;
 
 var timer = function(){
@@ -7,11 +5,11 @@ var seconds = 0;
 var minutes = 0;
 var dispMin = 0;
 
-if (counter === 65) {
+if (counter === 121) {
      clearInterval(timerId);
     }
 
-//for (counter = 1; counter <  70; counter++){
+
  if(counter<= 59){
      minutes = 0;
      dispMin = minutes + '0';
@@ -21,8 +19,9 @@ if (counter === 65) {
  
     else if(counter%60 === 0)
     {
-        minutes += 1;
-        seconds = 0+'0';
+        minutes = counter/60;
+        dispMin = minutes;
+        seconds = '00';
     }
     
     else {
@@ -37,11 +36,11 @@ if(minutes < 10) { dispMin = '0' + minutes;}
 
 console.log(dispMin + ":" + seconds);
 counter++;
-}
+};
  
  
 
-//};
+
 
 //timer();
 
@@ -50,6 +49,3 @@ var timerId = setInterval(timer, 1000);
 };
 
 updateDisplay();
-
-
-
