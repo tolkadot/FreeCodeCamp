@@ -1,12 +1,14 @@
-counter = 0;
+var counter = 0;
+var timerId;
 
 var timer = function(){
 var seconds = 0;
 var minutes = 0;
 var dispMin = 0;
 
-if (counter === 121) {
-     clearInterval(timerId);
+if (counter === 20) {
+    console.log("clearinterval");
+     stopClock();
     }
 
 
@@ -40,12 +42,13 @@ counter++;
  
  
 
-
-
-//timer();
-
 var updateDisplay = function() {
-var timerId = setInterval(timer, 1000);
+timerId = setInterval(timer, 1000);
 };
+
+var stopClock = function()
+{
+    clearInterval(timerId);
+}
 
 updateDisplay();
