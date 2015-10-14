@@ -1,3 +1,5 @@
+//a140a065ea1765a092c1c17444450de4
+//"http://api.openweathermap.org/data/2.5/weather?lat=" + lat + " &lon=" + lon + "&APPID=a140a065ea1765a092c1c17444450de4"
 function getWeather() {
 
   function error(err) {
@@ -11,7 +13,7 @@ function getWeather() {
     var lat = Math.round(pos.coords.latitude);
 
     var req = new XMLHttpRequest(); //
-    req.open("GET", "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + " &lon=" + lon, false); //format the API request URL
+    req.open("GET", "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=a140a065ea1765a092c1c17444450de4", false); //format the API request URL
     req.send(); //send API request
     console.log(lon, lat);
     console.log(req.status);
@@ -30,7 +32,8 @@ function getWeather() {
     $(document).ready(function(){
       
       $("#location").text(location);
-       $("#temperature").text(tempCelsius);
+       $("#temperatureC").text(tempCelsius);
+      $("#temperatureF").text(tempFarenheit);
       $("#icon").attr('src', "http://openweathermap.org/img/w/" + iconID + ".png");
     });
   }
