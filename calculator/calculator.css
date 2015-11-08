@@ -3,6 +3,7 @@
     border: 5px solid red;
     width: 77px;
     min-height:20px;
+    text-align: right;
 }
 
 button {
@@ -13,6 +14,5 @@ button {
 
 
 .clearClass {
-    
     width: 45px;
 }
