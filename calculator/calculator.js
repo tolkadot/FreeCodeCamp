@@ -1,4 +1,5 @@
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var point = ["."]
 var operators = ['-', '+', '×', '÷', '='];
 var sum = [];
 var result; 
@@ -40,7 +41,14 @@ sum.push(subArr);
     disp.innerHTML = result;
     subArr = [];
     sum =[];
+    var strLen = result.toString();
+    console.log(strLen)
+    if(strLen > 999999999){
+        updateInput("ERR")
+    }
+    else {
     updateInput(result);
+    }
 }
 
 function clear(){
@@ -91,6 +99,9 @@ var button9 = document.createElement("button");
 button9.innerHTML = numbers[9];
 var button0 = document.createElement("button");
 button0.innerHTML = numbers[0];
+var buttonPoint = document.createElement("button");
+buttonPoint.innerHTML = point[0];
+buttonPoint.className = "clearClass"
 
 var buttonPlus = document.createElement("button");
 buttonPlus.innerHTML = operators[1];
@@ -103,6 +114,7 @@ buttonDiv.innerHTML = operators[3];
 
 var buttonEquals = document.createElement("button");
 buttonEquals.innerHTML = operators[4];
+buttonEquals.className = "clearClass"
 var buttonClear = document.createElement("button");
 buttonClear.innerHTML = " CE ";
 buttonClear.className = "clearClass"
@@ -124,9 +136,16 @@ row3.appendChild(button8);
 row3.appendChild(button9);
 row3.appendChild(buttonMul);
 
-row4.appendChild(buttonClear);
-row4.appendChild(buttonEquals);
+row4.appendChild(buttonPoint);
+row4.appendChild(button0);
 row4.appendChild(buttonDiv);
+
+row5.appendChild(buttonClear);
+row5.appendChild(buttonEquals);
+
+
+
+
 
 
 // 3. Add event handler
@@ -139,6 +158,8 @@ button6.addEventListener("click", function(){updateInput(numbers[6])}, false);
 button7.addEventListener("click", function(){updateInput(numbers[7])}, false);
 button8.addEventListener("click", function(){updateInput(numbers[8])}, false);
 button9.addEventListener("click", function(){updateInput(numbers[9])}, false);
+button0.addEventListener("click", function(){updateInput(numbers[0])}, false);
+buttonPoint.addEventListener("click", function(){updateInput(point[0])}, false);
 
 buttonMinus.addEventListener("click", function(){updateSum(operators[0])}, false);
 buttonPlus.addEventListener("click", function(){updateSum(operators[1])}, false);
