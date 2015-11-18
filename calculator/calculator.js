@@ -27,7 +27,7 @@ var updateInput = function(num) {
 }
 
 var updateSum = function(oper) {
-    enableBtn("decimalPoint")
+    enableBtn("decimalPoint");
  sum.push(subArr);
     subArr = [];
     strArr = [];
@@ -37,6 +37,7 @@ var updateSum = function(oper) {
 }
 
 var equals = function(){
+enableBtn("decimalPoint")
 console.log("equals function")
 sum.push(subArr);
    //console.log(sum);
@@ -71,6 +72,7 @@ sum.push(subArr);
 }
 
 function clear(){
+    enableBtn("decimalPoint")
      disp.innerHTML = " ";
     sum = [];
     result = 0;
