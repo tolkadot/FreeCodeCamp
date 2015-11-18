@@ -25,7 +25,7 @@ var updateSum = function(oper) {
 }
 
 var equals = function(){
-   // console.log("equals function")
+console.log("equals function")
 sum.push(subArr);
    //console.log(sum);
     for(i=0; i<=sum.length; i++){
@@ -38,16 +38,23 @@ sum.push(subArr);
         
     }
     }
-    disp.innerHTML = result;
+    console.log(result);
+    
     subArr = [];
     sum =[];
     var strLen = result.toString();
-    console.log(strLen)
-    if(strLen > 999999999){
-        updateInput("ERR")
+    if(result > 999999999){
+        disp.innerHTML = "ERR"
     }
+    else if (strLen.length > 9 ){
+    strLen = strLen.slice(0,9);
+    disp.innerHTML = (strLen);
+    updateInput(strLen);
+    }
+    
     else {
-    updateInput(result);
+        disp.innerHTML = (result);
+        updateInput(result);
     }
 }
 
