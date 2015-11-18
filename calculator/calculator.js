@@ -11,8 +11,14 @@ var updateInput = function(num) {
 subArr.push(num);
     strArr = subArr.join('');
     subArr = strArr.split();
+    console.log(strArr, strArr.length)
+    if(strArr.length >9)
+    {disp.innerHTML = "ERR";
+    }
+        else{
     disp.innerHTML = subArr;
     console.log(subArr);
+        }
 }
 
 var updateSum = function(oper) {
