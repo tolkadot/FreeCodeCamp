@@ -8,7 +8,7 @@ var strArr;
 var disp = document.getElementById("display");
 
 var updateInput = function(num) {
-subArr.push(num);
+    subArr.push(num);
     strArr = subArr.join('');
     subArr = strArr.split();
     console.log(strArr, strArr.length)
@@ -19,9 +19,15 @@ subArr.push(num);
     disp.innerHTML = subArr;
     console.log(subArr);
         }
+    
+    console.log(strArr.indexOf("."));
+    if(strArr.indexOf(".") > 0){
+        disableBtn("decimalPoint")
+    }
 }
 
 var updateSum = function(oper) {
+    enableBtn("decimalPoint")
  sum.push(subArr);
     subArr = [];
     strArr = [];
@@ -114,7 +120,8 @@ var button0 = document.createElement("button");
 button0.innerHTML = numbers[0];
 var buttonPoint = document.createElement("button");
 buttonPoint.innerHTML = point[0];
-buttonPoint.className = "clearClass"
+buttonPoint.className = "bigButton"
+buttonPoint.setAttribute("id", "decimalPoint");
 
 var buttonPlus = document.createElement("button");
 buttonPlus.innerHTML = operators[1];
@@ -127,10 +134,10 @@ buttonDiv.innerHTML = operators[3];
 
 var buttonEquals = document.createElement("button");
 buttonEquals.innerHTML = operators[4];
-buttonEquals.className = "clearClass"
+buttonEquals.className = "bigButton"
 var buttonClear = document.createElement("button");
 buttonClear.innerHTML = " CE ";
-buttonClear.className = "clearClass"
+buttonClear.className = "bigButton"
 
 // 2. Append somewhere
 //var row1 = document.getElementById("row1");
@@ -181,3 +188,13 @@ buttonDiv.addEventListener("click", function(){updateSum(operators[3])}, false);
 
 buttonEquals.addEventListener("click", equals, false);
 buttonClear.addEventListener("click", clear, false);
+
+
+
+function disableBtn(btnName) {
+    document.getElementById(btnName).disabled = true;
+}
+function enableBtn(btnName) {
+    document.getElementById(btnName).disabled = false;
+  
+}
